@@ -109,7 +109,7 @@ class CampsiteInfo extends Component {
     resetForm() {
         this.setState({
             showModal: false,
-            rating: 5,
+            rating: 0,
             author: '',
             text: ''
         })
