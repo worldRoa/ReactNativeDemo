@@ -17,8 +17,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = {
     deleteFavorite: campsiteId => deleteFavorite(campsiteId)
-}
-
+};
 class Favorites extends Component {
 
     static navigationOptions = {
@@ -29,15 +28,16 @@ class Favorites extends Component {
         const { navigate } = this.props.navigation;
         const renderFavoriteItem = ({item}) => {
             return (
-            <SwipeRow rightOpenValue={-100} style={styles.swipeRow}>
-                <View style={styles.deleteView}>
-                    <TouchableOpacity
+                <SwipeRow rightOpenValue={-100} style={styles.swipeRow}>
+                    <View style={styles.deleteView}>
+                        <TouchableOpacity
                         style={styles.deleteTouchable}
                         onPress={() => this.props.deleteFavorite(item.id)}
                         >
-                            <Text style={styles.deleteText}>Delete</Text>
-                    </TouchableOpacity>
-                </View>
+                        <Text style={styles.deleteText}>Delete</Text>
+                        </TouchableOpacity>
+                    </View>
+
                 <View>
                     <ListItem
                         title={item.name}
