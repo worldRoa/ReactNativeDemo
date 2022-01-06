@@ -1,4 +1,4 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { persistStore, persistCombineReducers } from 'redux-persist';
 import storage from 'redux-persist/es/storage';
 import thunk from 'redux-thunk';
@@ -27,7 +27,7 @@ export const ConfigureStore = () => {
         applyMiddleware(thunk, logger)
     );
 
-        const persistor = persistStore(store);
+    const persistor = persistStore(store);
 
-    return (persistor, store);
-}
+    return { persistor, store };
+};
