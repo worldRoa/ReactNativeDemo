@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Text, ScrollView } from 'react-native';
+import { Text, View, ScrollView, FlatList,
+    Modal, Button, StyleSheet,
+    Alert, PanResponder, Share } from 'react-native';
 import { Card, Button, Icon } from 'react-native-elements';
 import * as Animatable from 'react-native-animatable';
 import * as MailComposer from 'expo-mail-composer';
